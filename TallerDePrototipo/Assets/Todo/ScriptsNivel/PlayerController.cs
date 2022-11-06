@@ -43,5 +43,15 @@ public class PlayerController : MonoBehaviour
         moveDirecction.y += Physics.gravity.y * Time.deltaTime * gravityScale;
 
         controller.Move(moveDirecction * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            gravityScale = 50f;
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            gravityScale = 5f;
+        }
     }
+    
 }
