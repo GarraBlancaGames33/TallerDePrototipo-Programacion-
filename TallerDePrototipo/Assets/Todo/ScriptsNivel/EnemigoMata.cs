@@ -9,6 +9,8 @@ public class EnemigoMata : MonoBehaviour
     public bool JugadorVivo = true;
     public JugadorMuere JugadorMuere;
     public Sombra Sombra;
+
+    public GameObject Enemigo;
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && MatarEnemigo.EnemigoVivo == true) //Si el jugador cae al vacio o colisiona con un enemigo y el jugador esta vivo
@@ -19,6 +21,10 @@ public class EnemigoMata : MonoBehaviour
             Sombra.moveSpeed = 0;
             Sombra.movimientohaciaAdelante = 0;
             Destroy(Sombra.DestruirSombra);
+        }
+        if(other.tag == "Bala")
+        {
+            Enemigo.SetActive(false);
         }
     }
 }
