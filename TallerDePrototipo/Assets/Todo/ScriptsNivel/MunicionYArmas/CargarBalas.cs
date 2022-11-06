@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bala : MonoBehaviour
+public class CargarBalas : MonoBehaviour
 {
-    private Rigidbody rb;
-    public float speed;
+    public Disparar Disparar;
+    public GameObject Cargador;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
-
-        rb.velocity = transform.forward * speed;
+        
     }
 
     // Update is called once per frame
@@ -20,9 +18,13 @@ public class Bala : MonoBehaviour
     {
         
     }
-
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(this.gameObject);
+        if(other.tag == "Player")
+        {
+            Disparar.balas = Disparar.balas + 1;
+            Cargador.SetActive(false);
+        }
+        
     }
 }

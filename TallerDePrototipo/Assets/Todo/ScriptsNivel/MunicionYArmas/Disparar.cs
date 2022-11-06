@@ -6,6 +6,10 @@ public class Disparar : MonoBehaviour
 {
     public GameObject bala;
     public GameObject FirePoint;
+    public CargarBalas CargarBalas;
+
+    public int balas;
+    
 
 
     void Start()
@@ -16,9 +20,10 @@ public class Disparar : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && balas > 0)
         {
             Instantiate(bala, FirePoint.transform.position,FirePoint.transform.rotation);
+            balas = balas - 1;
         }
     }
 }
