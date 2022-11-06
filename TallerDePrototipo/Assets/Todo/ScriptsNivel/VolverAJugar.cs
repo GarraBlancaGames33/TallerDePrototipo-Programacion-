@@ -15,5 +15,6 @@ public class VolverAJugar : MonoBehaviour
     public void VolverAjugarFuncion()
     {
         SceneManager.LoadScene(numeroDeEscena);
+        Time.timeScale = 1;
     }
 }

@@ -8,7 +8,6 @@ public class JugadorMuere : MonoBehaviour
     public ObstaculoMata ObstaculoMata;
     public EnemigoMata EnemigoMata;
     public ZonaMata ZonaMata;
-    public GameObject GameManager;
     public bool GameManagerBool = false;
 
     public GameObject Resultado;
