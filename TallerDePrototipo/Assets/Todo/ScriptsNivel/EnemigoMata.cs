@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemigoMata : MonoBehaviour
 {
-    public int numeroEscena;
     public MatarEnemigo MatarEnemigo;
     public GameObject Jugador;
     public bool JugadorVivo = true;

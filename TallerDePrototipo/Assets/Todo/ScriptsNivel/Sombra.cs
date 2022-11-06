@@ -5,8 +5,9 @@ using UnityEngine;
 public class Sombra : MonoBehaviour
 {
     public float moveSpeed;
-    public ZonaMata ZonaMata;
-    public EnemigoMata EnemigoMata;
+
+    public JugadorMuere JugadorMuere;
+
     public int movimientohaciaAdelante = 5;
 
     private Vector3 moveDirecction;
@@ -29,17 +30,12 @@ public class Sombra : MonoBehaviour
         moveDirecction = moveDirecction * moveSpeed;
         controller.Move(moveDirecction * Time.deltaTime);
 
-        if(ZonaMata.JugadorVivo == false) //Si el jugador esta muerto por la zona
+        if (JugadorMuere.ObstaculoMata.JugadorVivo == false || JugadorMuere.EnemigoMata.JugadorVivo == false || JugadorMuere.ZonaMata.JugadorVivo == false) //Si el jugador esta muerto por la zona,enemigo o caida
         {
             movimientohaciaAdelante = 0; //Movimiento hacia adelante baja a 0 (no se mueve)
-            moveSpeed = 0;
-            DestruirSombra.SetActive(false);
-        }
-        if(EnemigoMata.JugadorVivo == false) // Si el jugador esta muerto  por un enemigo
-        {
-            movimientohaciaAdelante = 0;
-            moveSpeed = 0;
-            DestruirSombra.SetActive(false);
+            moveSpeed = 0; //Movimiento lateral baja a 0
+            DestruirSombra.SetActive(false); //El Jugador desaparece
+            JugadorMuere.MostrarCanvasCuandoMuere();
         }
     }   
 }

@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class ZonaMata : MonoBehaviour
+public class ObstaculoMata : MonoBehaviour
 {
     public GameObject Jugador;
     public bool JugadorVivo = true;
