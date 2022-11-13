@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
+    public float MovimientoHaciaAdelante = 5f;
     public float jumpForce;
     public float gravityScale = 5f;
 
@@ -17,6 +18,10 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundMask;
 
     bool isGrounded;
+
+    public GirarPlayer GirarPlayer;
+
+    public Speed Speed;
 
     // Start is called before the first frame update
     void Start()
@@ -31,13 +36,33 @@ public class PlayerController : MonoBehaviour
 
         float yStore = moveDirecction.y;
 
-        moveDirecction = new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed, 0f, 5f);
-        moveDirecction = moveDirecction * moveSpeed;
-        moveDirecction.y = yStore;
+        if (GirarPlayer.movimientoNormal)
+        {
+            moveDirecction = new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed, 0f, MovimientoHaciaAdelante);
+            moveDirecction = moveDirecction * moveSpeed;
+            moveDirecction.y = yStore;
+        }
+       
+        if (GirarPlayer.EstaEnGiro)
+        {
+            moveDirecction = new Vector3(MovimientoHaciaAdelante, 0f, Input.GetAxisRaw("Horizontal") * -moveSpeed);
+            moveDirecction = moveDirecction * moveSpeed;
+            moveDirecction.y = yStore;
+        }
+        if (GirarPlayer.GiroAlreves)
+        {
+            moveDirecction = new Vector3(-MovimientoHaciaAdelante, 0f, Input.GetAxisRaw("Horizontal") * moveSpeed);
+            moveDirecction = moveDirecction * moveSpeed;
+            moveDirecction.y = yStore;
+        }
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             moveDirecction.y = jumpForce;
+        }
+        if (Speed.enSalto)
+        {
+            moveDirecction.y = jumpForce * 2;
         }
 
         moveDirecction.y += Physics.gravity.y * Time.deltaTime * gravityScale;
@@ -53,5 +78,7 @@ public class PlayerController : MonoBehaviour
             gravityScale = 5f;
         }
     }
+
+
     
 }

@@ -8,7 +8,6 @@ public class ZonaMata : MonoBehaviour
     public GameObject Jugador;
     public bool JugadorVivo = true;
     public JugadorMuere JugadorMuere;
-    public Sombra Sombra;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,9 +16,6 @@ public class ZonaMata : MonoBehaviour
             JugadorVivo = false; //El jugador muere
             Destroy(Jugador); //Desaparece el jugador
             JugadorMuere.MostrarCanvasCuandoMuere();
-            Sombra.moveSpeed = 0;
-            Sombra.movimientohaciaAdelante = 0;
-            Destroy(Sombra.DestruirSombra);
         }
     }
 }
