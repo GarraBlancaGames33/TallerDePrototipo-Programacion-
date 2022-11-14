@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Todo/Scenes/Nivel.unity
     guid: ec1a4a54ca1b08a42962f4c7aa35e4c7
+  - enabled: 1
+    path: Assets/Todo/Scenes/Victory Menu.unity
+    guid: 2594c65c12c503e4bab939fbf433b825
   m_configObjects: {}
