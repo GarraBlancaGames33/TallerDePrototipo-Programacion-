@@ -16,6 +16,7 @@ public class EnemigoMata : MonoBehaviour
         {
             JugadorVivo = false; //El jugador muere
             Destroy(Jugador); //Desaparece el jugador
+            ItemManager.current.hojas = 0;
             JugadorMuere.MostrarCanvasCuandoMuere();
         }
         if(other.tag == "Bala")
