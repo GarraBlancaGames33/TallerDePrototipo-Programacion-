@@ -772,7 +772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1816,7 +1816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -1933,7 +1933,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -2733,7 +2733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -2871,7 +2871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -4747,7 +4747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -5502,7 +5502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.03644657, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5632,7 +5632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -6248,7 +6248,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -6491,7 +6491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -6620,7 +6620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -6773,7 +6773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -7274,7 +7274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -7477,7 +7477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -7880,7 +7880,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -8565,6 +8565,7 @@ MonoBehaviour:
   ActivarContador: 0
   Material: {fileID: 2100000, guid: 7f09895d462f85542aac8dc7a59e7fa7, type: 2}
   Jugador: {fileID: 1022591606}
+  ImagenRapida: {fileID: 109184143}
 --- !u!114 &1022591620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8585,6 +8586,7 @@ MonoBehaviour:
   ObjetoQueFrena: {fileID: 1770920369}
   ActivarContadorFreno: 0
   ContadorFreno: 0
+  ImagenLenta: {fileID: 613762936}
 --- !u!1001 &1031580458
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9765,7 +9767,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -10060,7 +10062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -12753,7 +12755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -13208,7 +13210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -13677,7 +13679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador
@@ -14905,7 +14907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922250192355, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: platformSpeed
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1730856922827820491, guid: fd2666e7dea521b4084fe5bc4e85864e, type: 3}
       propertyPath: Jugador

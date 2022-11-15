@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JugadorLento : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class JugadorLento : MonoBehaviour
     public GameObject ObjetoQueFrena;
     public bool ActivarContadorFreno = false;
     public float ContadorFreno = 0f;
+    public GameObject ImagenLenta;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,7 @@ public class JugadorLento : MonoBehaviour
             ActivarContadorFreno = true;
             JugadorLento1();
             FrenarQueAgarro = 0;
+            ImagenLenta.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
         }
         if (ActivarContadorFreno)
         {
@@ -42,7 +45,9 @@ public class JugadorLento : MonoBehaviour
         {
             PlayerController.MovimientoHaciaAdelante = 5f;
             ActivarContadorFreno = false;
+            ContadorFreno = 0;
             ColorNormal();
+
         }
     }
 
@@ -52,6 +57,7 @@ public class JugadorLento : MonoBehaviour
         {
             Enfrenar = true;
             FrenarQueAgarro = FrenarQueAgarro + 1;
+            ImagenLenta.GetComponent<Image>().color = new Color32(17, 33, 197, 255);
         }
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjetoConElQueChoca : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class ObjetoConElQueChoca : MonoBehaviour
     public bool ActivarContador = false;
     public Material Material;
     public GameObject Jugador;
+    public GameObject ImagenRapida;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +34,7 @@ public class ObjetoConElQueChoca : MonoBehaviour
             ActivarContador = true;
             ColorVelocidad();
             AcelerarQueAgarro = 0;
+            ImagenRapida.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
 
         }
         if (ActivarContador)
@@ -42,6 +45,7 @@ public class ObjetoConElQueChoca : MonoBehaviour
         {
             PlayerController.MovimientoHaciaAdelante = 5f;
             ActivarContador = false;
+            contador = 0;
             ColorNormal();
         }
     }
@@ -52,6 +56,7 @@ public class ObjetoConElQueChoca : MonoBehaviour
         {
             EnAcelerar = true;
             AcelerarQueAgarro = AcelerarQueAgarro + 1;
+            ImagenRapida.GetComponent<Image>().color = new Color32(195, 46, 17, 255);
         }
     }
 
