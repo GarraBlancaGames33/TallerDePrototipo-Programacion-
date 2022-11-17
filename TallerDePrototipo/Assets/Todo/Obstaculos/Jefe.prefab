@@ -824,7 +824,7 @@ GameObject:
   - component: {fileID: 4803190404260413332}
   - component: {fileID: 4803190404260413331}
   m_Layer: 0
-  m_Name: Book_Rig_Project_File
+  m_Name: Jefe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
