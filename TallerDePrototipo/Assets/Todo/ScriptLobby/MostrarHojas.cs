@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-public class MostrarBalasEnUI : MonoBehaviour
-{
-    public TextMeshProUGUI HojasRecogidas;
-    public Disparar Disparar;
 
+public class MostrarHojas : MonoBehaviour
+{
+    public TextMeshProUGUI TextoNivel1;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +15,6 @@ public class MostrarBalasEnUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HojasRecogidas.text = Disparar.balas.ToString();
+        TextoNivel1.text = ItemManager.current.hojas + "/14";
     }
 }

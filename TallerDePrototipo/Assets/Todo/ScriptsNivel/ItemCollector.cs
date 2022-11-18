@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class ItemCollector : MonoBehaviour
 {
-    [SerializeField] Text hojasText;
+    [SerializeField] TextMeshProUGUI hojasText;
+    [SerializeField] TextMeshProUGUI hojasTextEnPausa;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,6 +15,7 @@ public class ItemCollector : MonoBehaviour
             Destroy(other.gameObject);
             ItemManager.current.hojas++;
             hojasText.text = ItemManager.current.hojas + "/14";
+            hojasTextEnPausa.text = ItemManager.current.hojas + "/14";
         }
     }
 }
