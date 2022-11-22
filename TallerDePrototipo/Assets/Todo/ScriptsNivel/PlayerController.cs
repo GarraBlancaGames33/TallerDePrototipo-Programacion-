@@ -23,6 +23,9 @@ public class PlayerController : MonoBehaviour
 
     public Speed Speed;
 
+    //Prueba
+    public float JumpTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -59,6 +62,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             moveDirecction.y = jumpForce;
+            gravityScale = 5f;
         }
         if (Speed.enSalto)
         {
@@ -69,13 +73,9 @@ public class PlayerController : MonoBehaviour
 
         controller.Move(moveDirecction * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             gravityScale = 50f;
-        }
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            gravityScale = 5f;
         }
     }
 
