@@ -18,6 +18,8 @@ public class EnemigoMata : MonoBehaviour
             Destroy(Jugador); //Desaparece el jugador
             ItemManager.current.hojas = 0;
             JugadorMuere.MostrarCanvasCuandoMuere();
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
         }
         if(other.tag == "Bala")
         {

@@ -34,6 +34,8 @@ public class Pausa : MonoBehaviour
         Tinta.SetActive(false);
         Rapido.SetActive(false);
         Lento.SetActive(false);
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
     public void Reanudar()
     {
@@ -43,5 +45,7 @@ public class Pausa : MonoBehaviour
         Tinta.SetActive(true);
         Rapido.SetActive(true);
         Lento.SetActive(true);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

@@ -4,52 +4,34 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-    public CharacterController controller;
+    [Header("Reference")]
+    public Transform orientation;
+    public Transform player;
+    public Transform PlayerOBj;
+    public Rigidbody rb;
 
-    public float speed = 10f;
-
-    public float gravity = -9.8f;
-    public float jumpHeight = 0.25f;
-
-    public Transform groundCheck;
-    public float groundDistance = 0.3f;
-    public LayerMask groundMask;
-
-    Vector3 velocity;
-
-    bool isGrounded;
+    public float rotationSpeed;
 
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
-    
+
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        Vector3 viewDir = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
+        orientation.forward = viewDir.normalized;
 
-        if(isGrounded && velocity.y < 0)
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        Vector3 inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
+
+        if(inputDir != Vector3.zero)
         {
-            velocity.y = -2f;
+            PlayerOBj.forward = Vector3.Slerp(PlayerOBj.forward,inputDir.normalized,Time.deltaTime * rotationSpeed);
         }
-
-
-
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        Vector3 move = transform.right * x + transform.forward * z;
-
-        controller.Move(move * speed * Time.deltaTime);
-
-        if (Input.GetButton("Jump") && isGrounded)
-        {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
-        }
-
-        velocity.y += gravity * Time.deltaTime;
-
-        controller.Move(velocity * Time.deltaTime);
     }
 }

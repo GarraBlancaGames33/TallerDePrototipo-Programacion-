@@ -16,6 +16,8 @@ public class Libro : MonoBehaviour
     void Start()
     {
         currentview = transform;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -26,6 +28,8 @@ public class Libro : MonoBehaviour
             currentview = views[0];
             PrimeraPantalla.SetActive(false);
             SegundaPantalla.SetActive(true);
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
         }
     }
 
