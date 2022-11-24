@@ -7,6 +7,7 @@ public class ZonaNivel2 : MonoBehaviour
 {
     public int numeroEscena;
     public ItemCollector ItemCollector;
+    public GameObject Niebla;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +17,18 @@ public class ZonaNivel2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(ItemManager.current.hojas >= 3)
+        {
+            Niebla.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && ItemManager.current.hojas >= 7)
+        if (other.tag == "Player" && ItemManager.current.hojas >= 3)
         {
             SceneManager.LoadScene(numeroEscena);
+            
         }
     }
 }

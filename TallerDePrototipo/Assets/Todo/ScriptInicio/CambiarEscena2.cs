@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class CambiarEscena2 : MonoBehaviour
 {
+    public void Start()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+    }
+
     public int numeroEscena;
     public void Lobby()
     {

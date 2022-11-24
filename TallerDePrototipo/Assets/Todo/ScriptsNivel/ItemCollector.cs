@@ -14,8 +14,9 @@ public class ItemCollector : MonoBehaviour
         {
             Destroy(other.gameObject);
             ItemManager.current.hojas++;
-            hojasText.text = ItemManager.current.hojas + "/14";
-            hojasTextEnPausa.text = ItemManager.current.hojas + "/14";
+            hojasText.text = ItemManager.current.hojas + "/9";
+            hojasTextEnPausa.text = ItemManager.current.hojas + "/9";
+            AudioManager.instance.PlayAudio(AudioManager.instance.AgarrarHoja);
         }
     }
 }

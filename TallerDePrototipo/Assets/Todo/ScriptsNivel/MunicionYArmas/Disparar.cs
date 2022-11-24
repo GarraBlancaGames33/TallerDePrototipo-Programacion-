@@ -24,6 +24,7 @@ public class Disparar : MonoBehaviour
         {
             Instantiate(bala, FirePoint.transform.position,FirePoint.transform.rotation);
             balas = balas - 1;
+            AudioManager.instance.PlayAudio(AudioManager.instance.AudioDisparo);
         }
     }
 }

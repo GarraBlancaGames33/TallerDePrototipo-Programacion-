@@ -17,11 +17,12 @@ public class PlayerController : MonoBehaviour
     public float groundDistance = 0.3f;
     public LayerMask groundMask;
 
-    bool isGrounded;
+    public bool isGrounded;
 
     public GirarPlayer GirarPlayer;
 
     public Speed Speed;
+    public Animacion Animacion;
 
     //Prueba
     public float JumpTime;
@@ -64,10 +65,14 @@ public class PlayerController : MonoBehaviour
         {
             moveDirecction.y = jumpForce;
             gravityScale = 5f;
+            Animacion.anim.SetBool("Salto", isGrounded);
+            AudioManager.instance.PlayAudio(AudioManager.instance.SonidoCaida);
+
         }
         if (Speed.enSalto)
         {
             moveDirecction.y = jumpForce * 2;
+            
         }
 
         moveDirecction.y += Physics.gravity.y * Time.deltaTime * gravityScale;
@@ -77,6 +82,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             gravityScale = 50f;
+            Animacion.anim.SetBool("Salto", isGrounded);
+            
         }
     }
 

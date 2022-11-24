@@ -15,6 +15,6 @@ public class MostrarHojas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TextoNivel1.text = ItemManager.current.hojas + "/14";
+        TextoNivel1.text = ItemManager.current.hojas + "/9";
     }
 }
