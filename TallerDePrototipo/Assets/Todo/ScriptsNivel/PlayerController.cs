@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    
+
     public float moveSpeed;
     public float MovimientoHaciaAdelante = 5f;
     public float jumpForce;
@@ -32,6 +34,9 @@ public class PlayerController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = -1;
     }
 
     // Update is called once per frame
