@@ -16,6 +16,5 @@ public class VolverAJugar : MonoBehaviour
     {
         SceneManager.LoadScene(numeroDeEscena);
         Time.timeScale = 1;
-        ItemManager.current.hojas = 0;
     }
 }
