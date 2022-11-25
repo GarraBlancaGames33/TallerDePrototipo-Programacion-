@@ -8,8 +8,8 @@ public class Pausa : MonoBehaviour
 
     public GameObject Hojas;
     public GameObject Tinta;
-    public GameObject Rapido;
-    public GameObject Lento;
+    //public GameObject Rapido;
+    //public GameObject Lento;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,8 +32,8 @@ public class Pausa : MonoBehaviour
         Panel.SetActive(true);
         Hojas.SetActive(false);
         Tinta.SetActive(false);
-        Rapido.SetActive(false);
-        Lento.SetActive(false);
+        //Rapido.SetActive(false);
+        //Lento.SetActive(false);
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }
@@ -43,8 +43,8 @@ public class Pausa : MonoBehaviour
         Panel.SetActive(false);
         Hojas.SetActive(true);
         Tinta.SetActive(true);
-        Rapido.SetActive(true);
-        Lento.SetActive(true);
+        //Rapido.SetActive(true);
+        //Lento.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
