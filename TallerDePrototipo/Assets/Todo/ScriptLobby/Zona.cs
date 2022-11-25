@@ -12,6 +12,8 @@ public class Zona : MonoBehaviour
         if(other.tag == "Player")
         {
             SceneManager.LoadScene(numeroEscena);
+            //Carga.NivelCarga("NIvel1Lag"); //Para hacer una pantalla de carga
+            ItemManager.current.hojas = 0;
         }
     }
 }
