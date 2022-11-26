@@ -13,7 +13,6 @@ public class Zona : MonoBehaviour
         {
             SceneManager.LoadScene(numeroEscena);
             //Carga.NivelCarga("NIvel1Lag"); //Para hacer una pantalla de carga
-            ItemManager.current.hojas = 0;
         }
     }
 }
