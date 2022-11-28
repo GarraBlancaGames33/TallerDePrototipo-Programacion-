@@ -8,6 +8,7 @@ TagManager:
   - Bala
   - Hoja
   - Suelo
+  - Hoja2
   layers:
   - Default
   - TransparentFX

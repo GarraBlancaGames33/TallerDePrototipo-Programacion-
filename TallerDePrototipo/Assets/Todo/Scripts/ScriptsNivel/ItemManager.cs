@@ -6,6 +6,7 @@ public class ItemManager : MonoBehaviour
 {
     public static ItemManager current;
     public int hojas;
+    public int hojasnivel2;
 
     private void Awake()
     {

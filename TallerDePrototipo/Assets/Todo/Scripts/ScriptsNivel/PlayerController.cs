@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Speed.enSalto)
         {
-            moveDirecction.y = jumpForce * 2;
+            moveDirecction.y = jumpForce * 10;
             
         }
 
