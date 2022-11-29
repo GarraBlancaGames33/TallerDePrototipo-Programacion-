@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Speed.enSalto)
         {
-            moveDirecction.y = jumpForce * 10;
+            moveDirecction.y = jumpForce * 7;
             
         }
 
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            gravityScale = 50f;
+            gravityScale = 40f;
             Animacion.anim.SetBool("Salto", isGrounded);
             
         }
