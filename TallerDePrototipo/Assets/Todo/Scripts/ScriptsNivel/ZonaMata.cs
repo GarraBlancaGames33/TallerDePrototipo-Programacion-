@@ -16,7 +16,6 @@ public class ZonaMata : MonoBehaviour
             JugadorVivo = false; //El jugador muere
             Destroy(Jugador); //Desaparece el jugador
             JugadorMuere.MostrarCanvasCuandoMuere();
-            ItemManager.current.hojas = 0;
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
         }

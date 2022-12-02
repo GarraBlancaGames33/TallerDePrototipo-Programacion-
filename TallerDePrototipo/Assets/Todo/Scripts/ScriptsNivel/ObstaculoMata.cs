@@ -13,7 +13,6 @@ public class ObstaculoMata : MonoBehaviour
         {
             JugadorVivo = false; //El jugador muere
             Destroy(Jugador); //Desaparece el jugador
-            ItemManager.current.hojas = 0;
             JugadorMuere.MostrarCanvasCuandoMuere();
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = true;
