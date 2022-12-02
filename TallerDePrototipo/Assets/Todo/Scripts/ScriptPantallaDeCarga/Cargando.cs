@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class Cargando : MonoBehaviour
 {
-    public Text Texto;
+    public TextMeshProUGUI Texto;
     // Start is called before the first frame update
     void Start()
     {
