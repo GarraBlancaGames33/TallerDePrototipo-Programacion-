@@ -20,7 +20,7 @@ public class Disparar : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W) && balas > 0)
+        if (Input.GetKeyDown(KeyCode.W) && balas > 0 || Input.GetKeyDown(KeyCode.UpArrow) && balas > 0)
         {
             Instantiate(bala, FirePoint.transform.position,FirePoint.transform.rotation);
             balas = balas - 1;

@@ -67,7 +67,6 @@ public class PlayerController : MonoBehaviour
         {
             moveDirecction.y = jumpForce;
             gravityScale = 5f;
-            Animacion.anim.SetBool("Salto", isGrounded);
             AudioManager.instance.PlayAudio(AudioManager.instance.SonidoCaida);
 
         }
@@ -84,8 +83,15 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             gravityScale = 40f;
-            Animacion.anim.SetBool("Salto", isGrounded);
             
+        }
+        if (isGrounded)
+        {
+            Animacion.anim.SetBool("Salto", false);
+        }
+        if (!isGrounded)
+        {
+            Animacion.anim.SetBool("Salto", true);
         }
     }
 
