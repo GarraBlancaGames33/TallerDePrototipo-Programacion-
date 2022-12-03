@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
             moveDirecction.y = yStore;
         }
        
-        if (GirarPlayer.EstaEnGiro)
+        if (GirarPlayer.EstaEnGiro90)
         {
             moveDirecction = new Vector3(MovimientoHaciaAdelante, 0f, Input.GetAxisRaw("Horizontal") * -moveSpeed);
             moveDirecction = moveDirecction * moveSpeed;
@@ -59,6 +59,12 @@ public class PlayerController : MonoBehaviour
         if (GirarPlayer.GiroAlreves)
         {
             moveDirecction = new Vector3(-MovimientoHaciaAdelante, 0f, Input.GetAxisRaw("Horizontal") * moveSpeed);
+            moveDirecction = moveDirecction * moveSpeed;
+            moveDirecction.y = yStore;
+        }
+        if (GirarPlayer.EstaEnGiro180)
+        {
+            moveDirecction = new Vector3(Input.GetAxisRaw("Horizontal") * -moveSpeed, 0f, -MovimientoHaciaAdelante);
             moveDirecction = moveDirecction * moveSpeed;
             moveDirecction.y = yStore;
         }

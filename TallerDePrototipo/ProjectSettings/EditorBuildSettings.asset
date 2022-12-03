@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Todo/Scenes/PantallaDeCarga.unity
     guid: d0627a1fae76daf418a79d1d78ce92cc
+  - enabled: 1
+    path: Assets/Todo/Scenes/Historia.unity
+    guid: 7d83db1f06cba0544b28edfdbc7b44cc
+  - enabled: 1
+    path: Assets/Todo/Scenes/Nivel3.unity
+    guid: cc9796830acf2ca4c86ce55c020b0f47
   m_configObjects: {}

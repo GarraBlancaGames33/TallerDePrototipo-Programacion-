@@ -6,7 +6,8 @@ public class GirarPlayer : MonoBehaviour
 {
     public Transform Player;
     public PlayerController PlayerController;
-    public bool EstaEnGiro = false;
+    public bool EstaEnGiro90 = false;
+    public bool EstaEnGiro180 = false;
     public bool movimientoNormal = true;
     public bool GiroAlreves = false;
     public float rotacionJugador;
@@ -21,7 +22,7 @@ public class GirarPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (EstaEnGiro)
+        if (EstaEnGiro90)
         {
             rotacionJugador -= yR;
 
@@ -45,6 +46,14 @@ public class GirarPlayer : MonoBehaviour
 
             Player.transform.rotation = Quaternion.Euler(0, rotacionJugador, 0);
         }
+        if (EstaEnGiro180)
+        {
+            rotacionJugador -= yR;
+
+            rotacionJugador = Mathf.Clamp(rotacionJugador, 180, 180);
+
+            Player.transform.rotation = Quaternion.Euler(0, rotacionJugador, 0);
+        }
 
     }
 
@@ -52,21 +61,31 @@ public class GirarPlayer : MonoBehaviour
     {
         if(other.name == "GIro90Grados")
         {
-            EstaEnGiro = true;
+            EstaEnGiro90 = true;
             movimientoNormal = false;
             GiroAlreves = false;
+            EstaEnGiro180 = false;
         }
         if(other.name == "1")
         {
-            EstaEnGiro = false;
+            EstaEnGiro90 = false;
             movimientoNormal = true;
             GiroAlreves = false;
+            EstaEnGiro180 = false;
         }
         if(other.name == "GiroAlreves")
         {
-            EstaEnGiro = false;
+            EstaEnGiro90 = false;
             movimientoNormal = false;
             GiroAlreves = true;
+            EstaEnGiro180 = false;
+        }
+        if(other.name == "Giro190Grados")
+        {
+            EstaEnGiro180 = true;
+            EstaEnGiro90 = false;
+            movimientoNormal = false;
+            GiroAlreves = false;
         }
     }
 }
