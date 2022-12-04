@@ -13062,7 +13062,7 @@ MonoBehaviour:
     Salto
     Especial : Mantener Espacio
 
-    Disparar: Tecla W'
+    Disparar: Tecla W / Flecha arriba'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ffed99ed229d04a48b6f098cbda17cb8, type: 2}
   m_sharedMaterial: {fileID: 445387228883695572, guid: ffed99ed229d04a48b6f098cbda17cb8, type: 2}
