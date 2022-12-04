@@ -22,6 +22,7 @@ public class CargarBalas : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            AudioManager.instance.PlayAudio(AudioManager.instance.agarrartinta);
             Disparar.balas = Disparar.balas + 1;
             Cargador.SetActive(false);
         }

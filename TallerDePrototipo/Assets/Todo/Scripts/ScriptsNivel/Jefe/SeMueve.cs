@@ -9,6 +9,7 @@ public class SeMueve : MonoBehaviour
     float moveSpeed = 4f;
     float MovimientoHaciaAdelante = 5f;
     public CharacterController controller;
+    public GameObject Vida;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +21,20 @@ public class SeMueve : MonoBehaviour
     {
         if (MovimientoJefe.EnTerritorio)
         {
-            moveDirecction = new Vector3(0 ,0,MovimientoHaciaAdelante);
+            Vida.SetActive(true);
+            moveDirecction = new Vector3(0 ,0,-MovimientoHaciaAdelante);
             moveDirecction = moveDirecction * moveSpeed;
 
             controller.Move(moveDirecction * Time.deltaTime);
+        }
+        if (MovimientoJefe.AlAlzanza)
+        {
+            Vida.SetActive(false);
+            moveDirecction = new Vector3(0, 0, 0);
+            moveDirecction = moveDirecction * moveSpeed;
+
+            controller.Move(moveDirecction * Time.deltaTime);
+
         }
     }
 }

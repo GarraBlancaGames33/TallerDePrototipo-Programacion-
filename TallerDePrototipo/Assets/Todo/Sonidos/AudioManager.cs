@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     public AudioMixer General;
     public AudioMixerGroup SFX, Musica;
     public AudioSource musica1;
-    public AudioSource SonidoCaida,AudioDisparo,AgarrarHoja;
+    public AudioSource SonidoCaida,AudioDisparo,AgarrarHoja,agarrartinta;
     public Slider masterSlider, musicaSlider, efectosslider;
 
     public static AudioManager instance;
